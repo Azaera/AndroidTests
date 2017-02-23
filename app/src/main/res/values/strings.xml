@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Android Test App</string>
+    <string name="browse">Toasts</string>
+    <string name="SAFR">AFR</string>
+    <string name="toastlong">Long Toast, no Context</string>
+    <string name="toastlong2">Long Toast, Context</string>
+    <string name="shorttoast">Short Toast, no Context</string>
+    <string name="shorttoast2">Short Toast, Context</string>
+    <string name="welcome">Welcome to the Android test app</string>
+    <string name="messages">Toast Messages</string>
+    <string name="back">Return</string>
+
+    <!-- String for messages-->
+    <string name="longToast">Long Toast, no strings.xml</string>
+    <string name="longToast2">Long Toast, String resource</string>
+    <string name="shortToast">Short Toast, no strings.xml</string>
+    <string name="shortToast2">Short Toast, String resource</string>
+
+    <!-- Activity For Result -->
+    <string name="startActivity">Continue</string>
+    <string name="passMessage">Your message will be shown below once you have pressed the continue button</string>
+    <string name="returnedMessage">Returned Message</string>
+    <string name="enterMessage">Enter message</string>
+
+    <!-- Explicit Intent -->
+    <string name="e_intent">Explicit Intent</string>
+    <string name="visit">Visit</string>
+    <string name="enterUrl">http://</string>
+
+    <!-- Option Menu -->
+    <string name="optionMenu">Option Menu</string>
+    <string name="item1">Item 1</string>
+    <string name="item2">Item 2</string>
+    <string name="item3">Item 3</string>
+</resources>
