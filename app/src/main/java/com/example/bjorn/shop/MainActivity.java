@@ -17,6 +17,15 @@ public class MainActivity extends AppCompatActivity {
         Button afr = (Button)findViewById(R.id.afr);
         Button e_intent = (Button)findViewById(R.id.explicit);
         Button menu = (Button)findViewById(R.id.option);
+        Button service = (Button)findViewById(R.id.service);
+
+        service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MusicPlayer.class);
+                startActivity(intent);
+            }
+        });
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void startService(View view) {
+        startService(new Intent(getBaseContext(), MusicPlayerService.class));
+    }
+
+    // Method to stop the service
+    public void stopService(View view) {
+        stopService(new Intent(getBaseContext(), MusicPlayerService.class));
     }
 
 }

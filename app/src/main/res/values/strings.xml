@@ -32,4 +32,12 @@
     <string name="item1">Item 1</string>
     <string name="item2">Item 2</string>
     <string name="item3">Item 3</string>
+
+    <!-- Service -->
+    <string name="service">Service</string>
+
+    <!-- musicplayer -->
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="mPlayer">Musicplayer</string>
 </resources>
