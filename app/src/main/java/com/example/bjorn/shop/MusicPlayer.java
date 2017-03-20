@@ -19,17 +19,11 @@ public class MusicPlayer extends AppCompatActivity implements View.OnClickListen
 
         Button start = (Button)findViewById(R.id.start);
         Button stop = (Button)findViewById(R.id.stop);
+        Button back = (Button) findViewById(R.id.back);
 
         start.setOnClickListener(this);
         stop.setOnClickListener(this);
-
-        System.out.println(" File List Start" );
-        File file[] = Environment.getExternalStorageDirectory().listFiles();
-        for (int i=1;i<=file.length;i++){
-            System.out.println(" No. "+i+" : "+file[i-1].getAbsolutePath());
-        }
-        System.out.println(" File List End" );
-
+        back.setOnClickListener(this);
     }
 
 
@@ -43,6 +37,13 @@ public class MusicPlayer extends AppCompatActivity implements View.OnClickListen
 
             case R.id.stop:
                 stopService(new Intent(this, MusicPlayerService.class ));
+                break;
+
+            case R.id.back:
+                Intent intent = new Intent(MusicPlayer.this, MainActivity.class);
+                startActivity(intent);
         }
+
+
     }
 }
