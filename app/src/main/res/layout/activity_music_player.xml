@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_orange_dark"
     tools:context="com.example.bjorn.shop.MusicPlayer">
 
     <TextView
@@ -43,4 +44,15 @@
         android:layout_marginLeft="13dp"
         android:layout_marginStart="13dp"
         android:id="@+id/stop" />
+
+    <Button
+        android:text="@string/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/stop"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="27dp"
+        android:layout_marginEnd="27dp"
+        android:id="@+id/back" />
 </RelativeLayout>

@@ -1,5 +1,7 @@
 package com.example.bjorn.shop;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button e_intent = (Button)findViewById(R.id.explicit);
         Button menu = (Button)findViewById(R.id.option);
         Button service = (Button)findViewById(R.id.service);
+        Button stop = (Button)findViewById(R.id.stop);
 
         service.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if (isServiceRunning(MusicPlayerService.class)) {
+            stop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    stopService(new Intent(getBaseContext(), MusicPlayerService.class));
+                }
+            });
+        }
+    }
+
+    private boolean isServiceRunning(Class<?> MusicPlayerService){
+        ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+
+        // Loop through the running services
+        for(ActivityManager.RunningServiceInfo service : activityManager.getRunningServices(Integer.MAX_VALUE)) {
+            if (MusicPlayerService.getName().equals(service.service.getClassName())) {
+                // If the service is running then return true
+                return true;
+            }
+        }
+        return false;
     }
 
     public void startService(View view) {

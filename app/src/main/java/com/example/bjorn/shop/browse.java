@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ public class browse extends AppCompatActivity {
         longs.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                Log.i("longs", "Testar");
                 Toast.makeText(getApplicationContext(), "Long Toast, no String resource",Toast.LENGTH_LONG).show();
             }
         });

@@ -30,7 +30,7 @@ public class MusicPlayer extends AppCompatActivity implements View.OnClickListen
         }
         System.out.println(" File List End" );
 
-        }
+    }
 
 
 
@@ -39,7 +39,7 @@ public class MusicPlayer extends AppCompatActivity implements View.OnClickListen
         switch(src.getId()) {
             case R.id.start:
                 startService(new Intent(this, MusicPlayerService.class));
-            break;
+                break;
 
             case R.id.stop:
                 stopService(new Intent(this, MusicPlayerService.class ));
